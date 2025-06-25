@@ -16,12 +16,12 @@
   SliderCaptcha.VERSION = '1.0';
   SliderCaptcha.Author = 'argo@163.com';
   SliderCaptcha.DEFAULTS = {
-    width: 280, // canvas宽度
-    height: 155, // canvas高度
+    width: 600,
+    height: 450,
     PI: Math.PI,
-    sliderL: 42, // 滑块边长
-    sliderR: 9, // 滑块半径
-    offset: 5, // 容错偏差
+    sliderL: 42,
+    sliderR: 9,
+    offset: 5,
     loadingText: '正在加載中...',
     failedText: '再試一次',
     barText: '向右滑動拼圖',
@@ -31,7 +31,11 @@
     //   return 'images/Pic' + Math.round(Math.random() * 4) + '.jpg';
     // },
     localImages: function () {
-      return 'images/my2.jpg';
+      // return 'images/my2.jpg';
+
+      const imgs = ['images/my1.jpg', 'images/my2.jpg'];
+      const rand = Math.floor(Math.random() * imgs.length);
+      return imgs[rand];
     },
 
     verify: function (arr, url) {
